@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "music_genres",
+  "info": {
+    "singularName": "music-genre",
+    "pluralName": "music-genres",
+    "displayName": "music_genre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "muge_name": {
+      "type": "string"
+    },
+    "songs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::song.song",
+      "mappedBy": "music_genres"
+    }
+  }
+}

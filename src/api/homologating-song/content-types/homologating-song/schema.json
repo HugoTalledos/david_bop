@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homologating_songs",
+  "info": {
+    "singularName": "homologating-song",
+    "pluralName": "homologating-songs",
+    "displayName": "homologating song",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hoso_name": {
+      "type": "string"
+    },
+    "songs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::song.song",
+      "mappedBy": "homologating_song"
+    }
+  }
+}

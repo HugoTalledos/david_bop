@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lyrics",
+  "info": {
+    "singularName": "lyric",
+    "pluralName": "lyrics",
+    "displayName": "lyric",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ly_lyric": {
+      "type": "richtext",
+      "required": true
+    },
+    "ly_chords": {
+      "type": "richtext",
+      "required": true
+    },
+    "song": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::song.song",
+      "inversedBy": "lyrics"
+    }
+  }
+}
